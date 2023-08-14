@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About - Sadhguru Moment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .vertical-bar {
+      height: 100px;
+      background-image: url(images/background\ image.jpg);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .vertical-bar h2 {
+      font-size: 44px;
+      color: #000;
+      font-weight: bold;
+      text-align: center;
+    }
+    
+    .navbar {
+      background-color: black;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 80px; /* Increase the padding to create more space horizontally */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 10px; /* Add margin to create space between options */
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+
+    
+    .body-content {
+      display: flex;
+      margin: 20px;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+    .image-box {
+      border: 2px solid #333;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .image-box img {
+      max-width: 100%;
+      max-height: 400px;
+    }
+    
+    .text-section {
+    text-align: justify;
+    padding: 0 20px;
+  }
+
+  .text-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .text-section p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+    
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    /* Styles for account dropdown */
+    .account-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .account-dropdown select {
+      appearance: none;
+      background: transparent;
+      border: none;
+      color: white;
+      padding: 14px 16px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .account-dropdown select:focus {
+      outline: none;
+    }
+
+    .account-dropdown select option {
+      background-color: black;
+      color: white;
+    }
+
+    .account-dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: black;
+      min-width: 160px;
+      z-index: 1;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .account-dropdown-content a {
+      color: white;
+      display: block;
+      padding: 4px 0;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .account-dropdown-content a:hover {
+      background-color: #555;
+    }
+
+    .account-dropdown select:focus + .account-dropdown-content {
+      display: block;
+    }
+    
+    /* Styles for gallery dropdown */
+    .gallery-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .gallery-dropdown select {
+      appearance: none;
+      background: transparent;
+      border: none;
+      color: white;
+      padding: 14px 16px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .gallery-dropdown select:focus {
+      outline: none;
+    }
+
+    .gallery-dropdown select option {
+      background-color: black;
+      color: white;
+    }
+
+    .gallery-dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: black;
+      min-width: 160px;
+      z-index: 1;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .gallery-dropdown-content a {
+      color: white;
+      display: block;
+      padding: 4px 0;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .gallery-dropdown-content a:hover {
+      background-color: #555;
+    }
+
+    .gallery-dropdown select:focus + .gallery-dropdown-content {
+      display: block;
+    }
+.go-back-button {
+      position: fixed;
+      top: 170px;
+      right: 40px;
+      padding: 10px 20px;
+      background-color: #0096FF;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="vertical-bar">
+    <h2>Welcome to Nellore Sai Thapovanam</h2>
+  </div>
+  
+  <div class="navbar">
+  <a href="home.html">Home</a>
+  <div class="gallery-dropdown">
+    <select onchange="location = this.value;">
+      <option value="#">Gallery</option>
+      <option value="book.html">Books</option>
+      <option value="video.html">Videos</option>
+    </select>
+    <div class="gallery-dropdown-content">
+      <a href="#">Gallery Option 1</a>
+      <a href="#">Gallery Option 2</a>
+    </div>
+  </div>
+  <a href="bookingslot.html">Booking Slot</a>
+  <a href="about.html">About Us</a> <!-- New "About Us" option -->
+  <a href="contact.html">Contact Us</a> <!-- Existing "Contact Us" option -->
+  <a href="bookedslot.html">Booked slot</a>
+    <a href="login.html?logout=true">Log Out</a>
+    
+</div>
+  
+  <div class="body-content">
+    <div class="image-box">
+      <a href="home.html" class="go-back-button">Go Back</a>
+      <img src="images/vamsi-1.jpg" alt="Your Image">
+    </div>
+    
+    <div class="text-section">
+      <h2>About Bheemaneni Vamsi Kiran</h2>
+       <p>
+        For over two and a half decades, the luminous presence of Bheemaneni Vamsi Kiran has graced the world of meditation, leaving an indelible mark on countless souls seeking inner peace and self-discovery. With an impressive track record spanning 25 years, he has emerged as a revered meditation master, guiding and shaping the lives of a staggering 10,000 individuals across his illustrious career. His teachings and insights have woven a tapestry of serenity, empowerment, and profound transformation for those fortunate enough to experience his guidance.
+
+At the heart of Bheemaneni Vamsi Kiran's exceptional journey lies an unwavering dedication to the art of dream decoding. A true specialist in this intricate realm of consciousness, he has deciphered the enigmatic language of dreams, unraveling their hidden messages and symbolism. Through his adept interpretations, he has offered seekers a gateway to their subconscious minds, enabling them to gain profound insights into their deepest desires, fears, and aspirations.
+
+A luminous beacon in the realm of meditation, Bheemaneni Vamsi Kiran is hailed for his unparalleled expertise in karmaprakshalana – a practice of cleansing and releasing karmic patterns that bind individuals to the cycle of suffering. His mastery over this intricate process has liberated countless individuals from the shackles of past actions, empowering them to embrace a path of spiritual evolution and liberation.
+
+Bheemaneni Vamsi Kiran's wisdom transcends mere instruction; it emanates from a wellspring of lived experiences, ancient knowledge, and an innate connection with the cosmos. His mesmerizing presence exudes a sense of tranquility, enveloping his students in an aura of peace and acceptance. Through his guidance, individuals have discovered the power of mindfulness, cultivating a profound awareness of the present moment that extends beyond meditation cushions and into the fabric of everyday life.
+
+As a revered meditation master, Bheemaneni Vamsi Kiran's impact radiates far beyond the meditation hall. His philanthropic endeavors have touched the lives of communities and individuals in need, embodying the spirit of selfless service and compassion. He has seamlessly woven ancient wisdom with modern sensibilities, bridging the gap between age-old practices and the demands of contemporary life.
+
+Bheemaneni Vamsi Kiran's teachings transcend cultural boundaries, resonating with seekers from all walks of life. His workshops, retreats, and lectures have provided a sanctuary for those seeking respite from the tumultuous currents of existence, offering a sacred space where the profound and the practical converge.
+
+In an age where the quest for inner harmony is more relevant than ever, Bheemaneni Vamsi Kiran stands as a guiding light, illuminating the path towards self-discovery, empowerment, and spiritual awakening. His legacy, etched into the hearts of the thousands he has touched, will continue to ripple through time, inspiring generations to come on their own journeys .
+      </p>
+    </div>
+  </div>
+  
+  <div class="footer">
+    &copy; Sadhguru Moment | Vamsi Kiran
+  </div>
+
+  <script>
+  function handleAccountOptionChange(select) {
+    var value = select.value;
+    if (value === 'login.html') {
+      window.location.href = 'login.html';
+    } else if (value === 'bookedslot.html') {
+      window.location.href = 'bookedslot.html'; // Redirect to bookedslot.html
+    }
+  }
+</script>
+</body>
+</html>

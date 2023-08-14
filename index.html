@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login - Nellore Thapovanam</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url(images/background\ image.jpg);
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+    }
+    
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin-top: 0;
+    }
+    
+    .right-section {
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+    
+    .heading {
+      font-size: 44px;
+      margin-bottom: 20px;
+      color: black; /* Changed color to black */
+      text-align: center;
+    }
+    
+    .login-text {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: white;
+    }
+    
+    .login-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* Flex-direction column removed to keep buttons side by side */
+      margin-top: 20px;
+    }
+    
+    .login-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 50px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .login-button:hover {
+      background-color: #45a049;
+    }
+    
+    .button-symbol {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="heading">Welcome to Nellore Sai Thapovanam</h1>
+  <div class="container">
+    <div class="right-section">
+      <h1>Choose Login Type</h1>
+      <div class="login-text">
+        
+      </div>
+      <div class="login-buttons">
+        <a href="adminlogin.html" class="login-button">
+          <img src="images/admin.png" alt="Admin Login" class="button-symbol">
+          Admin Login
+        </a>
+        <a href="login.html" class="login-button">
+          <img src="images/admin.png" alt="User Login" class="button-symbol">
+          User Login
+        </a>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Function to parse query parameters from URL
+    function getQueryParams() {
+      var queryParams = {};
+      var search = window.location.search.substring(1);
+      var pairs = search.split('&');
+      for (var i = 0; i < pairs.length; i++) {
+        var pair = pairs[i].split('=');
+        queryParams[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
+      }
+      return queryParams;
+    }
+
+    // Check if logout parameter is present in URL
+    var queryParams = getQueryParams();
+    if (queryParams.logout === 'true') {
+      var logoutMessage = document.getElementById('logout-message');
+      if (logoutMessage) {
+        logoutMessage.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>

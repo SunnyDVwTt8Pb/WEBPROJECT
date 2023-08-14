@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test - Sadhguru Moment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .vertical-bar {
+      height: 100px;
+      background-image: url(images/background\ image.jpg);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .vertical-bar h2 {
+      font-size: 44px;
+      color: #000;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Same nav bar CSS as in home.html */
+    .navbar {
+      background-color: black;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly; /* Make equal space between every option */
+    }
+
+    .navbar a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      background-color: #555;
+    }
+
+    /* Styles for account dropdown */
+    .account-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .account-dropdown select {
+      appearance: none;
+      background: transparent;
+      border: none;
+      color: white;
+      padding: 14px 16px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .account-dropdown select:focus {
+      outline: none;
+    }
+
+    .account-dropdown select option {
+      background-color: black;
+      color: white;
+    }
+
+    .account-dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: black;
+      min-width: 160px;
+      z-index: 1;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .account-dropdown-content a {
+      color: white;
+      display: block;
+      padding: 4px 0;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .account-dropdown-content a:hover {
+      background-color: #555;
+    }
+
+    .account-dropdown select:focus + .account-dropdown-content {
+      display: block;
+    }
+
+    /* Styles for gallery dropdown */
+    .gallery-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .gallery-dropdown select {
+      appearance: none;
+      background: transparent;
+      border: none;
+      color: white;
+      padding: 14px 16px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .gallery-dropdown select:focus {
+      outline: none;
+    }
+
+    .gallery-dropdown select option {
+      background-color: black;
+      color: white;
+    }
+
+    .gallery-dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: black;
+      min-width: 160px;
+      z-index: 1;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .gallery-dropdown-content a {
+      color: white;
+      display: block;
+      padding: 4px 0;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .gallery-dropdown-content a:hover {
+      background-color: #555;
+    }
+
+    .gallery-dropdown select:focus + .gallery-dropdown-content {
+      display: block;
+    }
+
+    .body-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+
+    .image-boxes {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .update-box {
+      width: calc(25% - 20px);
+      margin-bottom: 20px;
+      padding: 5px;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .update-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Media queries for responsiveness */
+    @media screen and (max-width: 1200px) {
+      .update-box {
+        width: calc(33.33% - 20px);
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      .update-box {
+        width: calc(50% - 20px);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .update-box {
+        width: 100%;
+      }
+    }
+    .ik{
+        justify-content: center;
+        text-align: center;
+    }
+    .vd{
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="vertical-bar">
+    <h2>Welcome to Nellore  Sai Thapovanam</h2>
+  </div>
+  
+  <!-- Updated navigation bar with the same CSS as in home.html -->
+  <!-- ... (your existing HTML code) ... -->
+
+<!-- Updated navigation bar with the same CSS as in home.html -->
+<!-- ... (your existing HTML code) ... -->
+
+<div class="navbar">
+  <a href="home.html">Home</a>
+  <div class="gallery-dropdown">
+    <select onchange="location = this.value;">
+      <option value="#">Gallery</option>
+      <option value="book.html">Books</option>
+      <option value="video.html">Videos</option>
+    </select>
+    <div class="gallery-dropdown-content">
+      <a href="#">Gallery Option 1</a>
+      <a href="#">Gallery Option 2</a>
+    </div>
+  </div>
+  <a href="bookingslot.html">Booking Slot</a>
+  <a href="about.html">About Us</a> <!-- New "About Us" option -->
+  <a href="contact.html">Contact Us</a> <!-- Existing "Contact Us" option -->
+  <a href="bookedslot.html">Booked slot</a>
+    <a href="login.html?logout=true">Log Out</a>
+    
+</div>
+
+<!-- ... (your existing HTML code) ... -->
+
+
+<!-- ... (your existing HTML code) ... -->
+
+  
+  <div class="body-content">
+    <div class="text-section">
+      
+        <h2 style="text-align: center;">About Nellore Sai Thapovanam</h2>
+
+      <div class="vd">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1BsHPC_pjQQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="sp.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+       <br>
+      <div>
+        <p>
+        Nestled amidst the picturesque crop fields and overlooking the tranquil waters of the Penna River, Nellore Sai Thapovanam stands as an oasis of serenity and spiritual growth. This sacred meditation center is dedicated to the teachings and principles of Sai Baba, offering seekers a profound opportunity to connect with themselves and the divine in the lap of nature's splendor.
+      </p>
+    
+      <p>
+        Nellore Sai Thapovanam carries the essence of Sai Baba's teachings, and his presence is palpable throughout the center. A majestic statue of Sai Baba welcomes visitors at the entrance, symbolizing the spiritual guardian who watches over all who seek solace and enlightenment within its grounds.
+      </p>
+      <p>
+        Surrounded by lush crop fields on one side and the gentle Penna River on the other, Nellore Sai Thapovanam's setting is an ode to Mother Nature's beauty. The natural elements blend seamlessly with the architecture, creating a harmonious environment that encourages introspection and self-discovery.
+      </p>The meditation halls are carefully oriented to allow natural light and fresh air to flow freely, enhancing the meditation experience. Cushioned mats and seating arrangements create an inviting atmosphere for individuals to delve into the depths of their consciousness.
+      <p>
+        The center boasts meticulously maintained gardens adorned with vibrant flowers and lush greenery. These gardens serve as spaces for contemplation and reflection, providing visitors with a sense of peace and connection to the wonders of the natural world.The center boasts meticulously maintained gardens adorned with vibrant flowers and lush greenery. These gardens serve as spaces for contemplation and reflection, providing visitors with a sense of peace and connection to the wonders of the natural world.
+      </p>
+      <p>
+        Meditation sessions at Nellore Sai Thapovanam are deeply rooted in Sai Baba's teachings, encouraging participants to embrace love, truth, and selflessness. Guided by experienced spiritual instructors, seekers learn various meditation techniques and delve into the art of mindfulness.
+
+        Spiritual discourses and lectures by knowledgeable scholars provide spiritual insights and inspire individuals to incorporate Sai Baba's teachings into their daily lives. These sessions foster a sense of community among visitors, creating an environment of shared growth and wisdom.
+      </p>
+      <p>
+        Nellore Sai Thapovanam also offers holistic wellness programs, including yoga, Ayurveda, and nature therapy, promoting the well-being of the mind, body, and spirit. These practices complement the meditation experience, allowing individuals to develop a balanced and harmonious lifestyle.
+      </p>
+    </div>
+    
+    
+    <br>
+
+    
+    <h1 class="ik">Recent updates</h1>
+    <div class="image-boxes">
+      <!-- Add 8 side-by-side image boxes for recent updates -->
+      <div class="update-box">
+        <img src="images/u-1.jpg" alt="Recent Update 1">
+      </div>
+      <div class="update-box">
+        <img src="images/u-2.jpg" alt="Recent Update 2">
+      </div>
+      <div class="update-box">
+        <img src="images/u-3.jpg" alt="Recent Update 3">
+      </div>
+      <div class="update-box">
+        <img src="images/u-4.jpg" alt="Recent Update 4">
+      </div>
+      <div class="update-box">
+        <img src="images/u-5.jpg" alt="Recent Update 5">
+      </div>
+      <div class="update-box">
+        <img src="images/u-6.jpg" alt="Recent Update 6">
+      </div>
+      <div class="update-box">
+        <img src="images/u-7.jpg" alt="Recent Update 7">
+      </div>
+      <div class="update-box">
+        <img src="images/u-9.jpg" alt="Recent Update 8">
+      </div>
+
+    </div>
+
+</div>
+
+    
+  </div>
+  
+  <div class="footer">
+    &copy; Sadhguru Moment | Vamsi Kiran
+  </div>
+
+ <script>
+  function handleAccountOptionChange(select) {
+    var value = select.value;
+    if (value === 'login.html') {
+      window.location.href = 'login.html';
+    } else if (value === 'bookedslot.html') {
+      window.location.href = 'bookedslot.html'; // Redirect to bookedslot.html
+    }
+  }
+</script>
+
+
+</body>
+</html>

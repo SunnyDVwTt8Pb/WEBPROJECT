@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Books - Sadhguru Moment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .vertical-bar {
+      height: 100px;
+      background-image: url(images/background\ image.jpg);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .vertical-bar h2 {
+      font-size: 44px;
+      color: #000;
+      font-weight: bold;
+      text-align: center;
+    }
+    
+    .navbar {
+      background-color: black;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly; /* Make equal space between every option */
+    }
+    
+    .navbar a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    
+    .navbar a:hover {
+      background-color: #555;
+    }
+    
+    .body-content {
+      display: flex;
+      margin: 20px;
+      flex-wrap: wrap;
+      justify-content: center; /* Center align the book boxes */
+      margin-top: 120px;
+
+    }
+    
+    .book-box {
+      width: 300px; /* Adjust the width as needed */
+      margin: 10px;
+      padding: 20px;
+      background-color: #f5f5f5;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+    
+    .book-box:hover {
+      transform: scale(1.05);
+    }
+    
+    .book-box img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    /* Styles for account dropdown */
+    .account-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .account-dropdown select {
+      appearance: none;
+      background: transparent;
+      border: none;
+      color: white;
+      padding: 14px 16px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .account-dropdown select:focus {
+      outline: none;
+    }
+
+    .account-dropdown select option {
+      background-color: black;
+      color: white;
+    }
+
+    .account-dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: black;
+      min-width: 160px;
+      z-index: 1;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .account-dropdown-content a {
+      color: white;
+      display: block;
+      padding: 4px 0;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .account-dropdown-content a:hover {
+      background-color: #555;
+    }
+
+    .account-dropdown select:focus + .account-dropdown-content {
+      display: block;
+    }
+    
+    /* Styles for gallery dropdown */
+    .gallery-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .gallery-dropdown select {
+      appearance: none;
+      background: transparent;
+      border: none;
+      color: white;
+      padding: 14px 16px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .gallery-dropdown select:focus {
+      outline: none;
+    }
+
+    .gallery-dropdown select option {
+      background-color: black;
+      color: white;
+    }
+
+    .gallery-dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: black;
+      min-width: 160px;
+      z-index: 1;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .gallery-dropdown-content a {
+      color: white;
+      display: block;
+      padding: 4px 0;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .gallery-dropdown-content a:hover {
+      background-color: #555;
+    }
+
+    .gallery-dropdown select:focus + .gallery-dropdown-content {
+      display: block;
+    }
+ .bk{
+      text-align: center;
+    }
+ .go-back-button {
+      position: fixed;
+      top: 170px;
+      right: 40px;
+      padding: 10px 20px;
+      background-color: #0096FF;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="vertical-bar">
+    <h2>Welcome to Nellore Sai Thapovanam</h2>
+  </div>
+  
+<div class="navbar">
+  <a href="home.html">Home</a>
+  <div class="gallery-dropdown">
+    <select onchange="location = this.value;">
+      <option value="#">Gallery</option>
+      <option value="book.html">Books</option>
+      <option value="video.html">Videos</option>
+    </select>
+    <div class="gallery-dropdown-content">
+      <a href="#">Gallery Option 1</a>
+      <a href="#">Gallery Option 2</a>
+    </div>
+  </div>
+  <a href="bookingslot.html">Booking Slot</a>
+  <a href="about.html">About Us</a> <!-- New "About Us" option -->
+  <a href="contact.html">Contact Us</a> <!-- Existing "Contact Us" option -->
+  <a href="bookedslot.html">Booked slot</a>
+    <a href="login.html?logout=true">Log Out</a>
+    
+</div>
+   <h1 class="bk">Available books </h1>
+ <a href="home.html" class="go-back-button">Go Back</a>
+  <div class="body-content">
+    <div class="book-box">
+      <a href="books/karmachakram.pdf" target="_blank">
+        <img src="images/karma.jpg" alt="Book 1">
+      </a>
+      <h3>Karma chakram</h3>
+    </div>
+    
+    <div class="book-box">
+      <a href="books/Arishadvargalu.pdf" target="_blank">
+        <img src="images/Arshad.jpg" alt="Book 2">
+      </a>
+      <h3>Arshad Vargalu</h3>
+    </div>
+    
+    <div class="book-box">
+      <a href="books/Swapnarahasyalu.pdf" target="_blank">
+        <img src="images/swapna.jpg" alt="Book 3">
+      </a>
+      <h3>Swapna Rahasyalu</h3>
+    </div>
+  </div>
+  
+  <div class="footer">
+    &copy; Sadhguru Moment | Vamsi Kiran
+  </div>
+ <script>
+  function handleAccountOptionChange(select) {
+    var value = select.value;
+    if (value === 'login.html') {
+      window.location.href = 'login.html';
+    } else if (value === 'bookedslot.html') {
+      window.location.href = 'bookedslot.html'; // Redirect to bookedslot.html
+    }
+  }
+</script>
+</body>
+</html>
